@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose')
-mongoose.connect('',{
+mongoose.connect(config.mongoURI,{
 
   useNewUrlParser:true, useUnifiedTopology:true
 
@@ -43,6 +43,16 @@ app.post('/register', (req, res)=>{
     })
   })
 
+})
+
+
+app.post('/login', (req,res)=>{
+
+  //요청된 이메일을 데이터베이스에서 있는지 찾는다.
+  User.findOne
+  //요청된 이메일이 데이터 베이스에 있다면 비밀번호가 맞는 비밀번호인지 확인.
+
+  //비밀번호까지 맞다면 토큰을 생성하기.
 })
 
 
