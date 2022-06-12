@@ -1,7 +1,7 @@
 const express = require('express')
 const req = require('express/lib/request')
 const app = express()
-const port = 5000
+const port = 5001
 const bodyParser = require('body-parser');
 const config = require('./config/key');
 const { User } = require("./models/User");
@@ -27,7 +27,7 @@ mongoose.connect(config.mongoURI,{
 
 
 app.get('/', (req, res) => {
-  res.send('안녕하세요 저는 김하연입니다.ㅋㅋ')
+  res.send('안녕하세요 저는 김하연입니다.')
 })
 
 

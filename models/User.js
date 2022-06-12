@@ -33,7 +33,7 @@ const userSchema = mongoose.Schema({
     },
 
 
-    role: {
+    role: { //유저 권한!!
 
         type: Number,
         default:0
