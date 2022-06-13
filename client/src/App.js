@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,16 +7,21 @@ import {
   Link
 } from "react-router-dom";
 
-import LandingPage from './components/views/LandingPage/LandingPage'
-import LoginPage from './components/views/LoginPage/LoginPage'
-import RegisterPage from './components/views/RegisterPage/RegisterPage'
-
-
 function App() {
   return (
-    <Router>
+<Router>
       <div>
-        
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </ul>
 
         <hr />
 
@@ -28,13 +34,13 @@ function App() {
         */}
         <Switch>
           <Route exact path="/">
-            <LandingPage />
+            <Home />
           </Route>
-          <Route path="/login">
-            <LoginPage />
+          <Route path="/about">
+            <About />
           </Route>
-          <Route path="/register">
-            <RegisterPage />
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       </div>
@@ -43,3 +49,34 @@ function App() {
 }
 
 export default App;
+
+
+
+
+// You can think of these components as "pages"
+// in your app.
+
+function Home() {
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
+}
+
+function Dashboard() {
+  return (
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+  );
+}
+
