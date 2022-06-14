@@ -1,5 +1,4 @@
 import './App.css';
-import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,13 +33,13 @@ function App() {
         */}
         <Switch>
           <Route exact path="/">
-            <Home />
+            {/* <Home /> */}
           </Route>
           <Route path="/about">
-            <About />
+            {/* <About /> */}
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            {/* <Dashboard /> */}
           </Route>
         </Switch>
       </div>
@@ -56,27 +55,27 @@ export default App;
 // You can think of these components as "pages"
 // in your app.
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
+// function Home() {
+//   return (
+//     <div>
+//       <h2>Home</h2>
+//     </div>
+//   );
+// }
 
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
+// function About() {
+//   return (
+//     <div>
+//       <h2>About</h2>
+//     </div>
+//   );
+// }
 
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
+// function Dashboard() {
+//   return (
+//     <div>
+//       <h2>Dashboard</h2>
+//     </div>
+//   );
+// }
 

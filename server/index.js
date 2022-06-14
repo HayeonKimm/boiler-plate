@@ -1,7 +1,6 @@
 const express = require('express')
 const req = require('express/lib/request')
 const app = express()
-const port = 5001
 const bodyParser = require('body-parser');
 const config = require('./config/key');
 const { User } = require("./models/User");
@@ -21,13 +20,17 @@ mongoose.connect(config.mongoURI,{
   useNewUrlParser:true, useUnifiedTopology:true
 
 
-}).then(()=> console.log('Connected'))  
+}).then(()=> console.log('몽고디비가 연결되었다아리마스!!!!!!!!!!!!!!!!!!!!!!!!!!!!'))  
     .catch(err => console.log(err))
 
 
 
 app.get('/', (req, res) => {
   res.send('안녕하세요 저는 김하연입니다.')
+})
+
+app.get('/api/hello', (req,res) => {
+  res.send("안녕하세요~")
 })
 
 
@@ -128,6 +131,8 @@ app.get('/api/users/logout', auth, (req,res)=>{
 })
 
 
+
+const port = 8080;
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
