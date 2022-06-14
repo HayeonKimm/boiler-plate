@@ -20,14 +20,12 @@ mongoose.connect(config.mongoURI,{
   useNewUrlParser:true, useUnifiedTopology:true
 
 
-}).then(()=> console.log('몽고디비가 연결되었다아리마스!!!!!!!!!!!!!!!!!!!!!!!!!!!!'))  
+}).then(()=> console.log('몽고디비가 연결되었다아리마스!!!!'))  
     .catch(err => console.log(err))
 
 
 
-app.get('/', (req, res) => {
-  res.send('안녕하세요 저는 김하연입니다.')
-})
+app.get('/', (req, res) =>  res.send('안녕하세요 저는 김하연입니다.'))
 
 app.get('/api/hello', (req,res) => {
   res.send("안녕하세요~")
@@ -89,6 +87,8 @@ app.post('/api/users/login', (req,res)=>{
 })
 
 
+
+// 로그인
 
 
 app.get('/api/users/auth', auth, (req, res)=>{
